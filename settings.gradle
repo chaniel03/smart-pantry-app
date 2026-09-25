@@ -1,0 +1,28 @@
+pluginManagement {
+    // Repositories that Gradle searches when resolving BUILD PLUGINS.
+    // google() MUST be here for com.android.application to resolve.
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+
+    // Explicit version pin - single source of truth for the AGP version.
+    // This prevents the "could not resolve plugin artifact" error because
+    // Gradle knows the version before it constructs the Maven coordinate.
+    plugins {
+        id 'com.android.application' version '8.2.0'
+    }
+}
+
+dependencyResolutionManagement {
+    // Repositories for PROJECT DEPENDENCIES (libraries, not plugins).
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "Smart Pantry Manager"
+include ':app'
