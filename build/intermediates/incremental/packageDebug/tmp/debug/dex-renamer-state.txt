@@ -1,4 +1,4 @@
-#Fri Sep 25 09:53:27 SAST 2026
+#Fri Sep 25 13:50:40 SAST 2026
 base.0=C\:\\Users\\f4985621\\IdeaProjects\\smart-pantry-app\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\f4985621\\IdeaProjects\\smart-pantry-app\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\f4985621\\IdeaProjects\\smart-pantry-app\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex

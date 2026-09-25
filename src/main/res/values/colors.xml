@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
+        Charcoal / Slate Grey palette
+        Sampled from the provided swatch (dark-to-light, left-to-right):
+          #1A2426  #2E3B3E  #3D4F52  #4F6366  #607D8B  #78909C  #90A4AE  #B0BEC5  #CFD8DC  #E8ECEE
+    -->
+
     <!-- Primary Colors -->
-    <color name="primary">#4CAF50</color>
-    <color name="primary_dark">#388E3C</color>
-    <color name="primary_light">#C8E6C9</color>
-    <color name="accent">#FF9800</color>
-    
+    <color name="primary">#2E3B3E</color>         <!-- dark slate — toolbar, FAB, buttons -->
+    <color name="primary_dark">#1A2426</color>     <!-- near-black — status bar -->
+    <color name="primary_light">#90A4AE</color>    <!-- mid cool-grey — accents, chips -->
+    <color name="accent">#607D8B</color>           <!-- blue-grey mid — highlights -->
+
     <!-- Background Colors -->
-    <color name="background_light">#FFFFFF</color>
-    <color name="background_dark">#121212</color>
-    <color name="surface_light">#F5F5F5</color>
-    <color name="surface_dark">#1E1E1E</color>
-    
+    <color name="background_light">#E8ECEE</color> <!-- near-white grey — screen background -->
+    <color name="background_dark">#1A2426</color>  <!-- near-black — dark mode background -->
+    <color name="surface_light">#CFD8DC</color>    <!-- light cool-grey — surface/card bg -->
+    <color name="surface_dark">#2E3B3E</color>     <!-- dark slate — dark mode surface -->
+
+    <!-- Card Background -->
+    <color name="card_background">#FFFFFF</color>
+
     <!-- Text Colors -->
-    <color name="text_primary_light">#212121</color>
-    <color name="text_secondary_light">#757575</color>
-    <color name="text_primary_dark">#FFFFFF</color>
-    <color name="text_secondary_dark">#B0B0B0</color>
-    
-    <!-- Status Colors -->
+    <color name="text_primary_light">#1A2426</color>    <!-- near-black on light bg -->
+    <color name="text_secondary_light">#4F6366</color>  <!-- mid-dark grey on light bg -->
+    <color name="text_primary_dark">#E8ECEE</color>     <!-- near-white on dark bg -->
+    <color name="text_secondary_dark">#90A4AE</color>   <!-- mid-grey on dark bg -->
+
+    <!-- Status Colors — kept functional, not from palette -->
     <color name="success">#4CAF50</color>
     <color name="error">#F44336</color>
     <color name="warning">#FF9800</color>
-    <color name="info">#2196F3</color>
-    
+    <color name="info">#607D8B</color>
+
     <!-- UI Elements -->
-    <color name="divider">#E0E0E0</color>
-    <color name="card_background">#FFFFFF</color>
-    <color name="ripple">#E0E0E0</color>
-    
-    <!-- Standard Material Colors -->
+    <color name="divider">#B0BEC5</color>
+    <color name="ripple">#CFD8DC</color>
+
+    <!-- Base -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="gray_light">#F5F5F5</color>
-    <color name="gray">#9E9E9E</color>
-    <color name="gray_dark">#616161</color>
+    <color name="gray_light">#CFD8DC</color>
+    <color name="gray">#78909C</color>
+    <color name="gray_dark">#3D4F52</color>
 </resources>

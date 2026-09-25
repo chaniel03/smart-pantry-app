@@ -1,15 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Launcher foreground: white "SPA" letters on a transparent background.
+    The adaptive icon background (ic_launcher_background.xml) supplies the
+    baby-blue circle, so this layer only draws the text shape.
+
+    Viewport 108x108 — safe zone is the inner 72x72 (18dp inset on each side).
+    All three letters are hand-drawn as filled paths, centered at ~54,54.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+
+    <!--
+        ===== S =====
+        Left column: x 22-37   height 36-72
+    -->
+    <!-- S top horizontal bar -->
     <path
-        android:fillColor="@color/white"
-        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,36 L37,36 L37,40 L22,40 Z"/>
+    <!-- S upper-left vertical -->
     <path
-        android:fillColor="@color/primary"
-        android:pathData="M54,30L54,78M30,54L78,54" 
-        android:strokeWidth="6"
-        android:strokeLineCap="round" />
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,36 L26,36 L26,52 L22,52 Z"/>
+    <!-- S middle horizontal bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,50 L37,50 L37,54 L22,54 Z"/>
+    <!-- S lower-right vertical -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M33,54 L37,54 L37,70 L33,70 Z"/>
+    <!-- S bottom horizontal bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,68 L37,68 L37,72 L22,72 Z"/>
+
+    <!--
+        ===== P =====
+        Middle column: x 41-56   height 36-72
+    -->
+    <!-- P vertical stem -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,36 L45,36 L45,72 L41,72 Z"/>
+    <!-- P top horizontal -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,36 L54,36 L54,40 L41,40 Z"/>
+    <!-- P middle horizontal -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,52 L54,52 L54,56 L41,56 Z"/>
+    <!-- P right vertical (bowl) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,36 L56,36 L56,56 L52,56 Z"/>
+
+    <!--
+        ===== A =====
+        Right column: x 60-86   height 36-72
+    -->
+    <!-- A left diagonal -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,72 L68,36 L71,36 L63,72 Z"/>
+    <!-- A right diagonal -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M83,72 L75,36 L78,36 L86,72 Z"/>
+    <!-- A crossbar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M64,57 L83,57 L83,61 L64,61 Z"/>
+
 </vector>

@@ -1,7 +1,5 @@
 package com.smartpantry.util;
 
-import android.text.TextUtils;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -58,7 +56,7 @@ public class ValidationUtils {
      * @return ValidationResult with status and error message
      */
     public static ValidationResult validateIngredientName(String ingredientName) {
-        if (TextUtils.isEmpty(ingredientName)) {
+        if (ingredientName == null || ingredientName.trim().isEmpty()) {
             return ValidationResult.error("Ingredient name is required");
         }
 
@@ -81,7 +79,7 @@ public class ValidationUtils {
      * @return ValidationResult with status and error message
      */
     public static ValidationResult validateQuantity(String quantityStr) {
-        if (TextUtils.isEmpty(quantityStr)) {
+        if (quantityStr == null || quantityStr.trim().isEmpty()) {
             return ValidationResult.error("Quantity is required");
         }
 
@@ -120,7 +118,7 @@ public class ValidationUtils {
      * @return ValidationResult with status and error message
      */
     public static ValidationResult validateUnit(String unit) {
-        if (TextUtils.isEmpty(unit)) {
+        if (unit == null || unit.trim().isEmpty()) {
             return ValidationResult.error("Unit is required");
         }
 
@@ -139,7 +137,7 @@ public class ValidationUtils {
      */
     public static ValidationResult validateExpiryDate(String expiryDateStr) {
         // Empty/null is valid (optional field)
-        if (TextUtils.isEmpty(expiryDateStr)) {
+        if (expiryDateStr == null || expiryDateStr.trim().isEmpty()) {
             return ValidationResult.success();
         }
 
@@ -163,7 +161,7 @@ public class ValidationUtils {
      * @return true if date is in the past
      */
     public static boolean isExpired(String expiryDateStr) {
-        if (TextUtils.isEmpty(expiryDateStr)) {
+        if (expiryDateStr == null || expiryDateStr.trim().isEmpty()) {
             return false;
         }
 
@@ -217,7 +215,7 @@ public class ValidationUtils {
      * @return Formatted date or empty string if invalid
      */
     public static String formatDate(String dateStr) {
-        if (TextUtils.isEmpty(dateStr)) {
+        if (dateStr == null || dateStr.trim().isEmpty()) {
             return "";
         }
 

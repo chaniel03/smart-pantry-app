@@ -24,6 +24,7 @@ color text_secondary_dark
 color text_secondary_light
 color warning
 color white
+drawable ic_launcher_background
 drawable ic_launcher_foreground
 id almost_matching_recipes_recycler_view
 id availability_indicator
