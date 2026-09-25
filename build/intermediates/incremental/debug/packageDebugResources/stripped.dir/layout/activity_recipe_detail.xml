@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="4dp"
+        android:theme="@style/Theme.SmartPantry.Toolbar"
+        app:title="@string/recipe_detail_title"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Recipe Name -->
+            <TextView
+                android:id="@+id/recipe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe Name"
+                style="@style/SmartPantry.Text.Title"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Recipe Description -->
+            <TextView
+                android:id="@+id/recipe_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe description goes here"
+                style="@style/SmartPantry.Text.Body"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Ingredients Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients"
+                style="@style/SmartPantry.Text.Subtitle"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ingredients_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Preparation Steps Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preparation_steps"
+                style="@style/SmartPantry.Text.Subtitle"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/preparation_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparation steps go here"
+                style="@style/SmartPantry.Text.Body"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

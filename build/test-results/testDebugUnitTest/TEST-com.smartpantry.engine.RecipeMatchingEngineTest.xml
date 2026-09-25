@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.smartpantry.engine.RecipeMatchingEngineTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-23T19:29:48" hostname="FNBU8XM9Z64" time="1.764">
+  <properties/>
+  <testcase name="getMatchingRecipes_emptyPantry_returnsEmpty" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="1.737"/>
+  <testcase name="getMatchingRecipes_excessQuantity_returnsRecipe" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.004"/>
+  <testcase name="getMatchingRecipes_insufficientQuantity_returnsEmpty" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.003"/>
+  <testcase name="getMatchingRecipes_missingIngredient_returnsEmpty" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.003"/>
+  <testcase name="getMatchingRecipes_pluralMatching_returnsRecipe" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.003"/>
+  <testcase name="getMatchingRecipes_exactMatch_returnsRecipe" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.003"/>
+  <testcase name="getAlmostMatchingRecipes_missingTwoIngredients_returnsEmpty" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.004"/>
+  <testcase name="getMatchingRecipes_caseInsensitive_returnsRecipe" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.002"/>
+  <testcase name="getAlmostMatchingRecipes_missingOneIngredient_returnsRecipe" classname="com.smartpantry.engine.RecipeMatchingEngineTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
