@@ -1,6 +1,7 @@
 package com.smartpantry.data.db;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -63,6 +64,8 @@ public abstract class AppDatabase extends RoomDatabase {
                         "smart_pantry_database"
                     )
                     .addCallback(roomCallback)
+                    .setJournalMode(JournalMode.WRITE_AHEAD_LOGGING)
+                    .fallbackToDestructiveMigration()
                     .build();
                 }
             }
@@ -71,19 +74,28 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     /**
-     * Callback to seed database on first creation
+     * Callback to seed database on first creation or open if empty
      */
-    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
+    private static RoomDatabase.Callback roomCallback = new Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-            
-            // Seed database with initial data
-            databaseWriteExecutor.execute(() -> {
-                if (INSTANCE != null) {
-                    seedDatabase(INSTANCE);
-                }
-            });
+        }
+
+        @Override
+        public void onOpen(@NonNull SupportSQLiteDatabase db) {
+            super.onOpen(db);
+            if (INSTANCE != null) {
+                databaseWriteExecutor.execute(() -> {
+                    try {
+                        if (INSTANCE.recipeDao().getAllRecipesSync().isEmpty()) {
+                            seedDatabase(INSTANCE);
+                        }
+                    } catch (Exception e) {
+                        Log.e("AppDatabase", "Error seeding database", e);
+                    }
+                });
+            }
         }
     };
 

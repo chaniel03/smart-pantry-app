@@ -81,8 +81,8 @@ public class PantryFragment extends Fragment {
     private void setupViewModel() {
         viewModel = new ViewModelProvider(this).get(PantryViewModel.class);
 
-        // Observe all pantry items
-        viewModel.getAllItems().observe(getViewLifecycleOwner(), items -> {
+        // Observe filtered pantry items
+        viewModel.getFilteredItems().observe(getViewLifecycleOwner(), items -> {
             adapter.submitList(items);
             
             // Show/hide empty state
@@ -110,13 +110,7 @@ public class PantryFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length() > 0) {
-                    viewModel.searchItems(s.toString()).observe(getViewLifecycleOwner(), 
-                        items -> adapter.submitList(items));
-                } else {
-                    viewModel.getAllItems().observe(getViewLifecycleOwner(), 
-                        items -> adapter.submitList(items));
-                }
+                viewModel.setSearchQuery(s.toString());
             }
 
             @Override
